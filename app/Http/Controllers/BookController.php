@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\BookModel;
 use Response;
-use Session;
 
 
 class BookController extends Controller

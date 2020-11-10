@@ -27,5 +27,10 @@ Route::post('read/update', [App\Http\Controllers\BookController::class, 'update'
 Route::get('read/{id}/delete',[App\Http\Controllers\BookController::class, 'destroy'])->name('read.destroy');
 
 
+Route::get('/live_search',[App\Http\Controllers\LiveSearch::class, 'index'])->name('live_search');
+Route::get('/live_search/action', [App\Http\Controllers\LiveSearch::class, 'action'])->name('live_search.action');
+
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
