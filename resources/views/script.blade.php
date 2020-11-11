@@ -36,7 +36,7 @@
             });
 
 
-            //When click edit student
+            //When click edit book
             $('body').on('click', '.btnEdit', function () {
                 var book_id = $(this).attr('data-id');
                 $.get('read/' + book_id +'/edit', function (data) {
@@ -46,7 +46,7 @@
                     $('#updateBook #txtDescriptions').val(data.descriptions);
                 })
             });
-            // Update the student
+            // Update the book
             $("#updateBook").validate({
                 rules: {
                     txtName: "required",
@@ -79,7 +79,7 @@
                 }
             });
 
-            //delete student
+            //delete book
             $('body').on('click', '.btnDelete', function () {
                 var book_id = $(this).attr('data-id');
                 $.get('read/' + book_id +'/delete', function (data) {

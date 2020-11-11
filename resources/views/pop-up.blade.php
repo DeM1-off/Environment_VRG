@@ -9,7 +9,7 @@
                 <h4 class="modal-title">Add New Book</h4>
             </div>
             <div class="modal-body">
-                <form id="addBook" name="addBook" action="{{ route('read.store') }}" method="post">
+                <form id="addBook" name="addBook" action="{{ route('read.store') }}" method="post"  enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="txtName">Name:</label>
@@ -18,6 +18,10 @@
                     <div class="form-group">
                         <label for="txtDescriptions">Descriptions</label>
                         <input type="text" class="form-control" id="txtDescriptions" placeholder="Enter Descriptions" name="txtDescriptions">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtUrl">Image</label>
+                        <input type="file" class="form-control" id="txtUrl" placeholder="Enter Descriptions" name="txtUrl">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
